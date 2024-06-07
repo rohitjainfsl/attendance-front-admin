@@ -22,8 +22,8 @@
       </div>
       <div class="hidden w-full divToToggle addFaculty">
         <form action="" method="post" id="addFaculty">
-          <input type="text" placeholder="Enter new Faculty Name"><br>
-          <input type="text" placeholder="Enter Aadhaar Number"><br>
+          <input type="text" id="fname" placeholder="Enter new Faculty Name" required><br>
+          <input type="text" id="faadhaar" placeholder="Enter Aadhaar Number" required><br>
           <button type="submit" class="bg-green-400 border-2 text-white px-2 py-1 rounded-md">Add Faculty</button>
         </form>
       </div>
@@ -44,9 +44,9 @@
       </div>
       <div class="hidden w-full divToToggle addStudent">
         <form action="" method="post" id="addStudent">
-          <input type="text" placeholder="Enter new Student Name"><br>
-          <input type="text" placeholder="Enter Aadhaar Number"><br>
-          <select name="" id="">
+          <input type="text" id="sname" placeholder="Enter new Student Name" required><br>
+          <input type="text" id="saadhaar" placeholder="Enter Aadhaar Number" required><br>
+          <select name="" id="sfaculty" required>
             <option value="" selected disabled>Who will be the faculty?</option>
           </select>
           <button type="submit" class="bg-green-400 border-2 text-white px-2 py-1 rounded-md">Add Student</button>

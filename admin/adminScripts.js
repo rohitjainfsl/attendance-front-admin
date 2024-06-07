@@ -20,12 +20,42 @@ window.addEventListener("load", async () => {
     });
   });
 
-  addFacultyForm.addEventListener("submit", (e) => {
+  addFacultyForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+    const fname = document.querySelector("#fname");
+    const faadhaar = document.querySelector("#faadhaar");
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: fname.value,
+        aadhaar: Number(faadhaar.value),
+      }),
+    };
+    const result = await apiQuery("/saveFaculty", options);
+    console.log(result);
   });
 
-  addStudentForm.addEventListener("submit", (e) => {
+  addStudentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+    const sname = document.querySelector("#sname");
+    const saadhaar = document.querySelector("#saadhaar");
+    const sfaculty = document.querySelector("#sfaculty");
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: sname.value,
+        aadhaar: Number(saadhaar.value),
+        faculty: sfaculty.value,
+      }),
+    };
+    const result = await apiQuery("/saveStudent", options);
+    console.log(result);
   });
 });
 
@@ -57,7 +87,7 @@ function displayFaculties(list) {
 }
 
 function displayFacultiesinSelect(list) {
-  console.log(list);
+  // console.log(list);
   const displaySelect = document.querySelector(".addStudent select");
   displaySelect.innerHTML =
     "<option value='' selected disabled>Who will be the faculty?</option>";
@@ -82,7 +112,7 @@ async function deleteFaculty(id) {
 }
 
 function displayStudents(list) {
-  console.log(list);
+  // console.log(list);
   const displayDiv = document.querySelector(".students .display");
   displayDiv.innerHTML = "";
   list.forEach((item, index) => {
