@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADMIN | Attendance Management</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper" class="flex">
+      <div class="faculties w-1/2 relative p-4">
+      <div class="add">
+        <button class="bg-green-500 border-2 text-white py-2 px-4 rounded-md hover:bg-white hover:text-black hover:border-green-500 toggleSwitch">ADD</button>
+      </div>
+      <div class="hidden w-full divToToggle addFaculty">
+        <form action="" method="post" id="addFaculty">
+          <input type="text" placeholder="Enter new Faculty Name"><br>
+          <input type="text" placeholder="Enter Aadhaar Number"><br>
+          <button type="submit" class="bg-green-400 border-2 text-white px-2 py-1 rounded-md">Add Faculty</button>
+        </form>
+      </div>
+        <div class="table w-full">
+          <header>
+            <p>S.No</p>
+            <p>Name</p>
+            <p>Delete</p>
+          </header>
+          <section class="display"></section>
+        </div>
+      </div>
+    </div>
+
+    <div class="students w-1/2 relative p-4">
+      <div class="add">
+        <button class="bg-green-500 border-2 text-white py-2 px-4 rounded-md hover:bg-white hover:text-black hover:border-green-500 toggleSwitch">ADD</button>
+      </div>
+      <div class="hidden w-full divToToggle addStudent">
+        <form action="" method="post" id="addStudent">
+          <input type="text" placeholder="Enter new Student Name"><br>
+          <input type="text" placeholder="Enter Aadhaar Number"><br>
+          <select name="" id="">
+            <option value="" selected disabled>Who will be the faculty?</option>
+          </select>
+          <button type="submit" class="bg-green-400 border-2 text-white px-2 py-1 rounded-md">Add Student</button>
+        </form>
+      </div>
+      <div class="table w-full">
+        <header>
+          <p>S.No</p>
+          <p>Name</p>
+          <p>Aadhaar Number</p>
+          <p>Faculty</p>
+        </header>
+        <section class="display"></section>
+      </div>
+    </div>
+  </div>
+    <script src="adminScripts.js"></script>
+  </body>
+</html>
