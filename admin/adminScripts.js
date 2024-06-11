@@ -35,7 +35,7 @@ window.addEventListener("load", async () => {
       }),
     };
     const result = await apiQuery("/saveFaculty", options);
-    console.log(result);
+    alert(result);
   });
 
   addStudentForm.addEventListener("submit", async (e) => {
@@ -55,7 +55,7 @@ window.addEventListener("load", async () => {
       }),
     };
     const result = await apiQuery("/saveStudent", options);
-    console.log(result);
+    alert(result);
   });
 });
 

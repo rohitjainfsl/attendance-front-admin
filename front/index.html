@@ -4,20 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Attendance Management System</title>
+    <link rel="stylesheet" href="output.css" />
   </head>
   <body>
     <div id="wrapper">
-      <header>
-        <select name="" id="">
+      <header class="p-2 mb-4">
+        <select name="" class="faculties border-2 border-solid border-green-500">
           <option value="" selected disabled>Select Faculty</option>
-          <option value="Rohit Jain">Rohit Jain</option>
-          <option value="Somesh Sharma">Somesh Sharma</option>
         </select>
       </header>
 
       <main>
         <p class="no-faculty-selected">Select Faculty</p>
+        <div id="attendance-grid" class="hidden">
+          <button>Save Attendance</button>
+        </div>
       </main>
     </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
