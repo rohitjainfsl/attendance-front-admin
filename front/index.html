@@ -8,20 +8,35 @@
   </head>
   <body>
     <div id="wrapper">
-      <header class="p-2 mb-4">
-        <select name="" class="faculties border-2 border-solid border-green-500">
-          <option value="" selected disabled>Select Faculty</option>
-        </select>
+      <header class="px-4 md:px-20 py-2 mb-4 flex items-center justify-between shadow">
+        <h2 class="text-lg md:text-2xl font-bold hover:underline">
+          <a href="index.html">Attendance Management System</a>
+        </h2>
       </header>
 
-      <main>
-        <p class="no-faculty-selected">Select Faculty</p>
-        <div id="attendance-grid" class="hidden">
-          <button>Save Attendance</button>
+      <main class="px-4 md:px-20 py-2">
+        <select
+          name=""
+          class="faculties border-2 border-solid border-green-500 mb-4 p-4 w-full rounded-md"
+        >
+          <option value="" selected disabled>Select Faculty</option>
+        </select>
+        <hr>
+        <p class="no-faculty-selected pt-2">Select Faculty</p>
+        <p class="alert alert-success bg-green-300/75 p-3 px-5 hidden"></p>
+        <div id="attendance-grid" class="hidden pt-2">
+          <div class="todays-attendance"></div>
+          <button
+            class="bg-green-500 border-2 text-white py-2 px-4 rounded-md hover:bg-white hover:text-black hover:border-green-500"
+          >
+            Save Attendance
+          </button>
         </div>
       </main>
     </div>
 
-    <script src="scripts.js"></script>
+    
+
+    <script src="scripts.js" type="module"></script>
   </body>
 </html>
