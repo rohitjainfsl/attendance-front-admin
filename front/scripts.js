@@ -1,4 +1,5 @@
 const APIURL = "https://attendance-api-sjkr.onrender.com";
+// const APIURL = "http://localhost:3000";
 const displaySelect = document.querySelector(".faculties");
 const attendanceGrid = document.querySelector("#attendance-grid");
 const todaysAttendance = document.querySelector(".todays-attendance");

@@ -1,4 +1,5 @@
 const APIURL = "https://attendance-api-sjkr.onrender.com";
+// const APIURL = "http://localhost:3000";
 const toggleSwitches = document.querySelectorAll(".toggleSwitch");
 const addFacultyForm = document.querySelector("#addFaculty");
 const addStudentForm = document.querySelector("#addStudent");
