@@ -627,6 +627,10 @@ video {
   display: table;
 }
 
+.grid {
+  display: grid;
+}
+
 .contents {
   display: contents;
 }
@@ -637,6 +641,10 @@ video {
 
 .h-5 {
   height: 1.25rem;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
 }
 
 .max-h-56 {
@@ -699,6 +707,10 @@ video {
 
 .resize {
   resize: both;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .items-center {
@@ -909,6 +921,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {

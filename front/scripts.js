@@ -8,7 +8,11 @@ let studentsData = [];
 
 window.addEventListener("load", async () => {
   let facultyList = await getFaculties();
-  displayFacultiesinSelect(facultyList);
+  if (facultyList.length > 0) {
+    document.querySelector("#wrapper").classList.remove("hidden");
+    document.querySelector("#loading").classList.add("hidden");
+    displayFacultiesinSelect(facultyList);
+  }
 
   displaySelect.addEventListener("change", async () => {
     const options = {
